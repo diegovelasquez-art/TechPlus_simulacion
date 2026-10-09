@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Diego Velásquez">
+    <title>TechPlus</title>
+    <link rel="stylesheet" href="static/css/style.css"> <!-- ENCABEZADO PRINCIPAL -->
+    <header class="header">
+        <div class="logo-nav">
+            <div class="logo">
+                <div class="fa-solid fa-laptop icono-logo-img"></div>
+                <div>
+                    <span class="txt-negro">Tech</span><span class="txt-azul">Plus</span>
+                    <p class="txt">soluciones informáticas</p>
+                </div>
+            </div>
+            <nav class="navegacion">
+                <a href="#" class="activo">Inicio</a>
+                <a href="#">Servicios</a>
+                <a href="#">Proyectos</a>
+                <a href="#">Contacto</a>
+            </nav>
+        </div>
+
+        <!-- Buscador -->
+        <div class="buscador">
+            <div class="icono-lupa"div>
+            <input type="text" id="inputBuscar" placeholder="Buscar servicios...">
+            <button id="btnIngresar">Buscar</button>
+        </div>
+    </header>
+
+    <!-- SECCIÓN HERO CON CARRUSEL -->
+    <section class="hero-contenedor">
+        <div class="hero-texto">
+            <p class="subtitulo-hero">Soporte y Soluciones</p>
+            <h1>Tecnología que impulsa tu negocio</h1>
+            <p>Soporte, desarrollo y asesoría informática para empresas y personas.</p>
+            <a href="#" class="btn-principal">Ver servicios</a>
+        </div>
+
+        <!-- Contenedor Flexbox/Carrusel -->
+        <div class="carrusel-contenedor">
+            <!-- Botón Izquierdo (resta 1) -->
+            <button onclick="cambiarImagen(-1)" class="btn-carrusel izq">❮</button>
+
+            <!-- Imagen central -->
+            <img id="imagen-carrusel" src="https://picsum.photos/id/1018/600/400" alt="Paisaje">
+
+            <!-- Botón Derecho (suma 1) -->
+            <button onclick="cambiarImagen(1)" class="btn-carrusel der">❯</button>
+
+            <!-- Pie de imagen del carrusel -->
+            <div class="carrusel-overlay">
+                <span id="titulo-carrusel">Soporte técnico en terreno</span>
+                <div class="carrusel-indicadores">
+                    <span class="dot activo" onclick="irAImagen(0)"></span>
+                    <span class="dot" onclick="irAImagen(1)"></span>
+                    <span class="dot" onclick="irAImagen(2)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN NUESTROS SERVICIOS -->
+    <section class="seccion">
+        <div class="seccion-header">
+            <h2 class="seccion-titulo">Nuestros servicios</h2>
+        </div>
+        <div class="grid-servicios">
+            <!-- Servicio 1 -->
+            <div class="tarjeta-servicio">
+                <img src="static/images/images (8).png" alt="Soporte Técnico" class="img-placeholder">
+                <h3>Soporte técnico</h3>
+                <p>Mantención, diagnóstico y soluciones rápidas.</p>
+                <button class="btn-ver-mas">Ver más</button>
+            </div>
+            <!-- Servicio 2 -->
+            <div class="tarjeta-servicio">
+                <div class="img-placeholder"></div>
+                <h3>Redes y conectividad</h3>
+                <p>Instalación y configuración de redes corporativas.</p>
+                <button class="btn-ver-mas">Ver más</button>
+            </div>
+            <!-- Servicio 3 -->
+            <div class="tarjeta-servicio">
+                <div class="img-placeholder"></div>
+                <h3>Desarrollo web</h3>
+                <p>Sitios web modernos y funcionales.</p>
+                <button class="btn-ver-mas">Ver más</button>
+            </div>
+            <!-- Servicio 4 -->
+            <div class="tarjeta-servicio">
+                <div class="img-placeholder"></div>
+                <h3>Seguridad informática</h3>
+                <p>Protección de datos y asesoría en ciberseguridad.</p>
+                <button class="btn-ver-mas">Ver más</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ÚLTIMOS PROYECTOS -->
+    <section class="seccion">
+        <div class="seccion-header">
+            <h2 class="seccion-titulo">Últimos proyectos</h2>
+            <a href="#" class="enlace-ver-todos">Ver todos &rarr;</a>
+        </div>
+        <div class="grid-proyectos">
+            <!-- Proyecto 1 -->
+            <div class="tarjeta-proyecto">
+                <div class="proyecto-img-box">
+                    <span class="badge-categoria">Sitio web</span>
+                    <button class="btn-like liked" onclick="toggleLike(this, 24)">
+                        <div class="fa-solid fa-heart"></div> <span class="like-count">24</span>
+                    </button>
+                </div>
+                <div class="proyecto-info">
+                    <h3>Clínica Vida</h3>
+                    <p>Sitio web corporativo con formulario de contacto.</p>
+                </div>
+            </div>
+            <!-- Proyecto 2 -->
+            <div class="tarjeta-proyecto">
+                <div class="proyecto-img-box">
+                    <span class="badge-categoria">Redes</span>
+                    <button class="btn-like" onclick="toggleLike(this, 17)">
+                        <i class="fa-regular fa-heart"></i> <span class="like-count">17</span>
+                    </button>
+                </div>
+                <div class="proyecto-info">
+                    <h3>Comercial Norte</h3>
+                    <p>Implementación de red y seguridad.</p>
+                </div>
+            </div>
+            <!-- Proyecto 3 -->
+            <div class="tarjeta-proyecto">
+                <div class="proyecto-img-box">
+                    <span class="badge-categoria">Soporte</span>
+                    <button class="btn-like" onclick="toggleLike(this, 31)">
+                        <div class="fa-regular fa-heart"></div> <span class="like-count">31</span>
+                    </button>
+                </div>
+                <div class="proyecto-info">
+                    <h3>Colegio Los Robles</h3>
+                    <p>Mantención y soporte técnico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="footer-contenido">
+            <div class="footer-logo">
+                <i class="fa-solid fa-laptop icono-logo-img" style="color: white;"></i>
+                <div>
+                    <span class="txt-negro">TechPlus</span>
+                    <p class="txt" style="color: #adb5bd;">soluciones informáticas</p>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <a href="#">Inicio</a>
+                <a href="#">Servicios</a>
+                <a href="#">Proyectos</a>
+                <a href="#">Contacto</a>
+            </nav>
+            <div class="sociales">
+                <a href="#"><div class="fa-brands fa-linkedin"></div></a>
+                <a href="#"><div class="fa-brands fa-instagram"></div></a>
+                <a href="#"><div class="fa-brands fa-facebook"></div></a>
+            </div>
+        </div>
+    </footer>
+        <script src="static/js/script.js"></script>
+</html>
+
+    </body>

@@ -1,0 +1,254 @@
+        /* --- ESTILOS GENERALES --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- ENCABEZADO / HEADER --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icono-logo-img {
+            font-size: 28px;
+            color: #0b1325;
+        }
+
+        .txt-negro {
+            font-weight: 800;
+            font-size: 22px;
+            color: #0b1325;
+        }
+
+        .txt-azul {
+            font-weight: 800;
+            font-size: 22px;
+            color: #0d6efd;
+        }
+
+        .txt {
+            font-size: 11px;
+            color: #6c757d;
+            margin-top: -3px;
+        }
+
+        .navegacion {
+            display: flex;
+            gap: 25px;
+        }
+
+        .navegacion a {
+            font-weight: 500;
+            color: #495057;
+            padding-bottom: 5px;
+            transition: color 0.3s;
+        }
+
+        .navegacion a:hover,
+        .navegacion a.activo {
+            color: #0d6efd;
+            border-bottom: 2px solid #0d6efd;
+        }
+        .img-placeholder{
+            display: flex;
+            padding: 10px;
+            margin: 10px;
+            height: 150px;
+            width:300px;
+        }
+        .tarjeta-servicio {
+            
+}
+
+        /* Buscador */
+        .buscador {
+            display: flex;
+            align-items: center;
+            background-color: #f1f3f5;
+            border-radius: 6px;
+            padding: 4px 8px;
+            border: 1px solid #dee2e6;
+        }
+
+        .icono-lupa {
+            color: #6c757d;
+            margin-right: 8px;
+            margin-left: 5px;
+        }
+
+        .buscador input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 6px;
+            font-size: 14px;
+            width: 180px;
+        }
+
+        .buscador button {
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            padding: 7px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .buscador button:hover {
+            background-color: #0b5ed7;
+        }
+
+        /* --- SECCIÓN HERO & CARRUSEL --- */
+        .hero-contenedor {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 50px 5%;
+            align-items: center;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .hero-texto .subtitulo-hero {
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 700;
+            color: #6c757d;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .hero-texto h1 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #111;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .hero-texto p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .btn-principal {
+            display: inline-block;
+            background-color: #1f242d;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-principal:hover {
+            background-color: #343a40;
+        }
+
+        /* Contenedor Carrusel */
+        .carrusel-contenedor {
+            position: relative;
+            width: 100%;
+            height: 320px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background-color: #ccc;
+        }
+
+        .carrusel-contenedor img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .btn-carrusel {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+            z-index: 10;
+        }
+
+        .btn-carrusel:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .btn-carrusel.izq {
+            left: 15px;
+        }
+
+        .btn-carrusel.der {
+            right: 15px;
+        }
+
+        .carrusel-overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .carrusel-indicadores {
+            display: flex;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255,)
+        }
